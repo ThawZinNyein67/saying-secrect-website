@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet"  href="Css/quiztime.css">
+    <link rel="stylesheet" href="Css/footer.css">
+    <title>Saying & Secrets|Quiz Zone</title>
+    <link rel="icon" href="Image/logo.png" type="image/icon type">
+    <style>
+  .radio {
+  cursor:pointer;}
+  .quiz-part img{
+  width:100%;
+  opacity:1;
+  text-align:left;
+ 
+}
+.quiz-part .choice{
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr ;
+  top:45%;
+  left: 15%;
+  
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="top">
+        <nav class="nav">
+            <div class="nav-logo">
+               <img src="Image/logo.png">
+            </div>
+            <span style="color:white;position:relative;right:7%;" >Sayings&Secrets</span>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" onclick="notallowed()"  class="link ">Home</a></li>
+                    <li><a href="#" onclick="notallowed()"  class="link active">Quiz Zone</a></li>
+                    <li><a href="#" onclick="notallowed()"  class="link">Proverbs Dictionary</a></li>
+                    <li><a href="#" onclick="notallowed()"  class="link">About</a></li>
+                    <li><a href="#" onclick="notallowed()"  class="link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-button" id="authButton">
+              
+            </div>
+                      <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+      <div style="margin-top:10vh;">
+      
+      
+      
+          <form id="results-container">
+            <div id="quiz-container">
+
+            </div>
+              
+                  <center  ><a href="#top"><input type="submit" id="submit-button-answer"value="Submit" style="position:relative  ;-ms-transform: translateY(-50%);
+                   transform: translateY(-50%);
+                  border-radius:20px;cursor:pointer;width:50%;padding:10px;font-size:1rem;"></a></center>
+               
+          </form>
+        
+       </div>
+  </div>
+           
+<footer>
+  <div class="first">
+      <h2>Address</h2>
+      <p>University of Computer Studies(Taungoo)</p>
+      <p>Phone: +959 697 046 155</p>
+      <p>Email:<a href="mailto:thawzinnyein504@gmail.com" style="color: white;"> sayings@gmail.com</a></p>
+  </div>
+  <div class="sec">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href=""onclick="notallowed()">Home</a></li>
+        <li><a href=""onclick="notallowed()">Quiz Zone</a></li>
+        <li><a href=""onclick="notallowed()">Proverb Dictionary</a></li>
+        <li><a href="" onclick="notallowed()">About</a></li>
+        <li><a href=""onclick="notallowed()">Contact</a></li>
+      </ul>
+  </div>
+  <div class="third">
+      <h2>Similar Pages</h2>
+      <ul>
+          <li><a href="https://www.mmproverbs.pro/2019/01/blog-post_23.html">မြန်မာစကားပုံနှင့် ဆိုရိုးစကားများ</a></li>
+      </ul>
+  </div>
+  <div></div>
+
+</footer>
+  
+
+<script src="Js/script.js">
+
+</script>
+<script>
+  
+  
+    const quizData = [
+      {
+        question: "------------ဆောက်နှင့်ထွင်း။",
+        answers: [
+          { text: "လာလာချင်း", correct: true },
+          { text: "၀င်၀င်ချင်း", correct: false },
+          { text: "မြင်မြင်ချင်း", correct: false }
+        ]
+      },
+      {
+        question: "လူချင်းတူသော်လည်း------------။",
+        answers: [
+          { text: "စိတ်နေစိတ်ထားကွဲ", correct: false },
+          { text: "အသက်ရှူခြင်းကွဲ", correct: true },
+          { text: "လှုပ်ရှားပုံခြင်းကွဲ", correct: false }
+        ]
+      },
+      {
+          question: "လူတွင်ပါ၍------------။",
+          answers: [
+            { text: "လာတိုက်ခိုက်", correct: false },
+            { text: "ဓားပြတိုက်", correct: false },
+            { text: "နွားကျားကိုက်", correct: true }
+          ]
+        },
+        {
+          question: "------------နတ်ပြည်တင် မြင့်တယ်ထင်လို့ ခုန်ချ။",
+          answers: [
+            { text: "လူမိုက်", correct: true },
+            { text: "လူဆိုး", correct: false },
+            { text: "လူရမ်းကား", correct: false }
+          ]
+        },
+        {
+          question: "------------သွန်လိုသွန်၊ မှောက်လိုမှောက်။",
+          answers: [
+            { text: "ကန်ထဲကရေ", correct: false },
+            { text: "လက်ခုပ်တွင်းကရေ", correct: true },
+            { text: "တွင်းထဲကရေ", correct: false }
+          ]
+        },
+        {
+          question: "------------လက်ထိပ်နာ။",
+          answers: [
+            { text: "လက်ချောင်းဆိတ်", correct: false },
+            { text: "လက်မဆိတ်", correct: false },
+            { text: "လက်သည်းဆိတ်", correct: true }
+          ]
+        },
+        {
+          question: "လယ်ထွန်သွား------------။",
+          answers: [
+            { text: "နွားမေ့", correct: true },
+            { text: "ကျွဲမေ့", correct: false },
+            { text: "လှည်းမေ့", correct: false }
+          ]
+        },
+        {
+          question: "လုပ်စားမိုးခေါင်၊------------- ခွေးဟောင်။",
+          answers: [
+            { text: "ဖွက်စား", correct: false },
+            { text: "ခိုးစား", correct: true },
+            { text: "ကြိတ်စား", correct: false }
+          ]
+        },
+        {
+          question: "လက်ညှိုးညွန်ရာ------------။",
+          answers: [
+            { text: "ရွှေဖြစ်", correct: false },
+            { text: "ငွေဖြစ်", correct: false },
+            { text: "ရေဖြစ်", correct: true }
+          ]
+        },
+        {
+          question: "------------ဒန်းစီး။",
+          answers: [
+            { text: "လေဖမ်း", correct: true },
+            { text: "ရေဖမ်း", correct: false },
+            { text: "နွယ်ပန်း", correct: false }
+          ]
+        },
+        {
+          question: "လူမင်း------------ နတ်မင်းမနေနိုင်။",
+          answers: [
+            { text: "ကံကြီး", correct: false },
+            { text: "ဘုန်းကြီး", correct: true },
+            { text: "တန်ခိုးကြီး", correct: false }
+          ]
+        },
+    ];
+    
+    // Function to randomize the questions
+    function getRandomQuestions(quizData, numQuestions) {
+      const randomQuestions = [];
+      for (let i = 0; i < numQuestions; i++) {
+        const randomIndex = Math.floor(Math.random() * quizData.length);
+        randomQuestions.push(quizData[randomIndex]);
+        quizData.splice(randomIndex, 1); // Remove the question from the original array
+      }
+      return randomQuestions;
+    }
+    
+    // Get 5 random questions
+    const randomQuestions = getRandomQuestions(quizData, 5);
+    
+    // Display the questions to the user
+    const quizContainer = document.getElementById('quiz-container');
+    randomQuestions.forEach((question, index) => {
+      const questionHTML = `
+        <div class="quiz-part" style="margin:1rem;width:75vh;color:white;opacity:1;">
+          <img src="Image/quizbgg.png" style="border:solid 1px black;border-radius:20px;">
+          <p class="head" style="color:white;">Quiz.${index + 1}</p>
+          <p class="question" style="left:18vh;color:white;">${question.question}</p>
+          <div class="choice">
+            ${question.answers.map((answer, answerIndex) => `
+              <div style="color:white;">
+                <input class="radio" type="radio" name="question${index + 1}" value="${answer.text}" required>
+                ${answer.text}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+      quizContainer.innerHTML += questionHTML;
+    });
+    
+    // Add event listener to submit button
+    const submitButton = document.getElementById('submit-button-answer');
+    submitButton.addEventListener('click', checkAnswers);
+    
+    // Function to check answers
+    function checkAnswers() {
+    const userAnswers = {};
+    const radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach((radio) => { 
+      if (radio.checked) {
+        const questionIndex = radio.name.match(/\d+/)[0] - 1;
+        userAnswers[questionIndex] = radio.value;
+      }
+    });
+    
+    const correctAnswers = randomQuestions.map((question) => question.answers.find((answer) => answer.correct).text);
+    let score = 0;
+    let accuracy = 0;
+Object.keys(userAnswers).forEach((index) => {
+    if (userAnswers[index] === correctAnswers[index]) {
+      score++;
+      accuracy += 20; // 20% for each correct answer
+    }
+  });
+  
+  // Display results
+  const resultsHTML = `
+     
+      <center>
+        <div style="color:white;  background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+          background-color: rgba(39,39,39, 0.6);padding :2rem;border-radius:10px;border:solid 15px rgb(246, 112, 52);">
+            <h2>Results</h2>
+            <p>Your score:${score}/5</p>
+            <p >Accuracy: ${accuracy}/%</p>
+        </div></center>
+          ${randomQuestions.map((question, index) => ` 
+        
+  
+            <div class="quiz-part" style="margin:1rem;width:75vh;color:white;opacity:1;">
+              <img src="Image/quizbgg.png" style="border:solid 1px black;border-radius:20px;">
+              <p class="head" style="color:white;">Quiz.${index + 1}</p>
+              <p class="question" style="left:18vh;color:white;">${question.question}</p>
+              <div class="choice">
+                ${question.answers.map((answer, answerIndex) => `
+                  <div style="color:white;">
+                    <input class="radio" type="radio" name="question${index + 1}" value="${answer.text}" ${userAnswers[index] === answer.text ? 'checked' : ''}>
+                    ${answer.text} ${userAnswers[index] === answer.text ? (answer.correct ? '<span style="color:green;">&#10004;</span>' : '<span style="color:red;">&#10008;</span>') : ''}
+                  </div>
+                `).join('')}
+                <p style="color:white;">Correct answer: ${correctAnswers[index]} <span style="color:white;">&#10004;</span></p>
+              </div>
+            </div>
+          </div>
+          `).join('')}
+          <div style="display: flex; justify-content: center;">
+         <a href="quizzone.html" style="text-decoration: none;"><span style="margin:auto:width:50%;
+                   border-radius:20px;cursor:pointer;width:50%;padding:10px;font-size:1rem;background:rgb(246, 112, 52);color:black;">Back to Quiz Zone</span></a>
+         </div> `
+          ;
+  const resultsContainer = document.getElementById('results-container');
+  resultsContainer.innerHTML = resultsHTML;
+  }
+  
+  const createbtn = document.getElementById('seebtn');
+      const createForm = document.getElementById('see');
+      function show(){
+        createForm.style.display = createForm.style.display === 'none' ? 'block' : 'none';
+      }
+  </script>
+  
+  
+  </body>
+  </html>

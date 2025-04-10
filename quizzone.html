@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayings & Secrects:Quiz Zone</title>
+    <link rel="icon" href="Image/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="Css/quizzone.css">
+    <link rel="stylesheet" href="Css/footer.css">
+	<style>
+	.abtn{
+		padding:0.5rem;
+		color:white;
+		width:100%;
+		border-radius:10px;
+		border:solid 1px black;
+		 background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+		background-color: rgba(39,39,39, 0.6);
+		cursor:pointer;
+		 transition: .3s ease;
+	}
+	
+	.abtn:hover{
+  	  background-color: rgb(196, 196, 196);
+	
+	}
+	
+	</style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="Image/logo.png">
+        </div>
+        <span style="color:white;position:relative;right:7%;" >Sayings&Secrets</span>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="index.html" class="link ">Home</a></li>
+                <li><a href="#" class="link active">Quiz Zone</a></li>
+                <li><a href="dectionary.html" class="link ">Proverbs Dictionary</a></li>
+                <li><a href="about.html" class="link ">About</a></li>
+                <li><a href="contact.html" class="link">Contact</a></li>
+               
+            </ul>
+        </div>
+        <div class="nav-button" id="authButton">
+      
+            <a href="loginup.html"><button class="btn white-btn " onclick="login()">Sign In</button></a>
+   
+           
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <div class="zone">
+            <!-- filter Items -->
+            <div class="nav-bar">
+                
+                    <div class="items">
+                    <center>
+                        <span class="item active" data-name="all">အားလုံး</span>
+                        <span class="item" data-name="proverb">စကားပုံမေးခွန်းများ</span>
+                        <span class="item" data-name="riddle">စကားထာမေးခွန်းများ</span>
+                        <span class="item" data-name="lie">စကားလိမ်မေးခွန်းများ</span>
+                    </center>
+                    </div>
+            </div>
+            
+		
+			<jsp:useBean id="process" class="mycrud.mainprocess"></jsp:useBean>
+			
+            <!-- filter Images -->
+            <div class="gallery">
+                <div class="pack" data-name="proverb">
+                	
+                        <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/က.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div>
+                                    <h2>က နှင့်စသောစကားပုံများ </h2>
+                                    <p>စုစုပေါင်း မေးခွန်း အပုဒ်ရေ ၁၀ ပုဒ်</p>
+                                    <div id="kagyi">
+                                        <a href="alert.html"><button class="abtn"  name="tablename" value="kagyi" >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                      
+                </div>
+                <div class="pack" data-name="proverb">
+               
+                	<div class="single-pack">
+                        <div class="package-img-row">
+                            <img class="package-img" src="Image/ခ.jpg">
+                        </div>
+                        <div class="package-text">
+                            <div >
+                                <h2>ခ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                <p>စုစုပေါင်း မေးခွန်း အပုဒ်ရေ ၁၀  ပုဒ်</p>
+                               
+                                <div id="khakway">
+                                    <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                </div>
+                
+
+                <div class="pack" data-name="proverb">
+                
+                	<div class="single-pack">
+                        <div class="package-img-row">
+                            <img class="package-img" src="Image/c.jpg">
+                        </div>
+                        <div class="package-text">
+                            <div >
+                                <h2>င နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                <p>မေးခွန်း အပုဒ်ရေ ၁၀ ပုဒ်</p>
+                                
+                                <div id="nga">
+                                    <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                    <div class="pack" data-name="proverb">
+
+                    	<div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/ဆ.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>ဆ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ  ၁၀ ပုဒ်</p>
+                                   
+                                    <div id="salain">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="pack" data-name="proverb">
+                     
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/တ.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>တ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ  ၁၀  ပုဒ်</p>
+                                    <div id="ta">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="pack" data-name="proverb">
+                    
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/ထ.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>ထ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ  ၁၀  ပုဒ်</p>
+                                    <div id="hta">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  
+                        
+                    </div>
+                    
+                    <div class="pack" data-name="proverb">
+                  
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/န.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>န နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ  ၁၀  ပုဒ်</p>
+                                    <div id="nange">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+             
+                        
+                    </div>
+                    <div class="pack" data-name="proverb">
+                    
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/ပ.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>ပ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ ၁၀ ပုဒ်</p>
+                                    <div id="pasouk">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    </div>
+                    <div class="pack" data-name="proverb">
+                    
+	                    <div class="single-pack">
+	                            <div class="package-img-row">
+	                                <img class="package-img" src="Image/ဘ၁.jpg">
+	                            </div>
+	                            <div class="package-text">
+	                                <div >
+	                                    <h2>ဘ နှင့်စသော မြန်မာစကားပုံများ </h2>
+	                                    <p>မေးခွန်း အပုဒ်ရေ  ၁၀ ပုဒ်</p>
+                                        <div id="bakone">
+                                            <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                        </div>
+	                                </div>
+	                            </div>
+	                        </div>
+               
+                        
+                    </div>
+                    <div class="pack" data-name="proverb">
+                     
+	                     <div class="single-pack">
+	                            <div class="package-img-row">
+	                                <img class="package-img" src="Image/မ.jpg">
+	                            </div>
+	                            <div class="package-text">
+	                                <div >
+	                                    <h2>မ နှင့်စသော မြန်မာစကားပုံများ </h2>
+	                                    <p>မေးခွန်း အပုဒ်ရေ ၁၀ ပုဒ်</p>
+	                                    <div id="ma">
+                                            <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                        </div>
+	                                </div>
+	                            </div>
+	                        </div>
+                    
+                        
+                    </div>
+                    
+                    <div class="pack" data-name="proverb">
+                     
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/ရ.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>ရ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ ၁၀  ပုဒ်</p>
+                                    <div id="rakout">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  
+                        
+                    </div>
+                  
+                        
+                    
+                    <div class="pack" data-name="proverb">
+                   
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/လ.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>လ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ ၁၀ ပုဒ်</p>
+                                    <div id="la">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        
+                    </div>
+                    <div class="pack" data-name="proverb">
+                     
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/သ.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>သ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ ၁၀ ပုဒ်</p>
+                                    <div id="tha">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                    </div>
+                    <div class="pack" data-name="proverb">
+                     
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/အ.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>အ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ  ၁၀ ပုဒ်</p>
+                                    <div id="aha">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+                        
+                    </div>
+                   
+                    
+					<div class="pack" data-name="proverb">
+                    
+	                    <div class="single-pack">
+	                            <div class="package-img-row">
+	                                <img class="package-img" src="Image/ယ၃.jpg">
+	                            </div>
+	                            <div class="package-text">
+	                                <div >
+	                                    <h2>ယ၊ဝ၊ဟ နှင့်စသော မြန်မာစကားပုံများ </h2>
+	                                    <p>မေးခွန်း အပုဒ်ရေ  ၁၀  ပုဒ်</p>
+                                        <div id="yawaha">
+                                            <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                        </div>
+	                                </div>
+	                            </div>
+	                        </div>
+                    </form>
+                        
+                    </div>
+                    <div class="pack" data-name="proverb">
+                  
+                 	 <div class="single-pack">
+                        <div class="package-img-row">
+                            <img class="package-img" src="Image/ဂ၄.jpg">
+                        </div>
+                        <div class="package-text">
+                            <div >
+                                <h2>ဂ၊စ၊ဇ၊ဈ၊ညနှင့်စသောစကားပုံများ </h2>
+                                <p>မေးခွန်း အပုဒ်ရေ ၁၀ ပုဒ်</p>
+                                
+                                <div id="gatonya">
+                                    <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="pack" data-name="proverb">
+                  
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/dadafaba.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2>ဒ၊ဓ၊ဖ၊ဗ နှင့်စသော မြန်မာစကားပုံများ </h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ ၁၀   ပုဒ်</p>
+                                    <div id="ddpf">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        
+                    </div>
+				 <div class="pack" data-name="riddle">
+                
+                    <div class="single-pack">
+                            <div class="package-img-row">
+                                <img class="package-img" src="Image/riddle.jpg">
+                            </div>
+                            <div class="package-text">
+                                <div >
+                                    <h2> မြန်မာစကားထာများ</h2>
+                                    <p>မေးခွန်း အပုဒ်ရေ  ၁၀  ပုဒ်</p>
+                                    <div id="riddles">
+                                        <a href="alert.html"><button class="abtn"   >ဖြေဆိုရန်</button ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                    </div>
+                    <div class="pack" data-name="lie">
+                        
+                        <div class="single-pack">
+                                <div class="package-img-row">
+                                    <img class="package-img" src="Image/lie.jpg">
+                                </div>
+                                <div class="package-text">
+                                    <div >
+                                        <h2> မြန်မာစကားလိမ်များ</h2>
+                                        <p>မေးခွန်း အပုဒ်ရေ  ၁၀ ပုဒ်</p>
+                                        
+                                        <div id="lies">
+                                            <a href="alert.html"><button class="abtn"  >ဖြေဆိုရန်</button ></a> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                        </div>
+            </div>
+    </div>
+    <footer>
+      <div class="first">
+          <h2>Address</h2>
+          <p>University of Computer Studies(Taungoo)</p>
+  
+          <p>Phone: +959 697 046 155</p>
+          <p>Email:<a href="mailto:thawzinnyein504@gmail.com" style="color: white;"> sayings@gmail.com</a></p>
+      </div>
+      <div class="sec">
+          <h2>Menu</h2>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="quizzone.html">Quiz Zone</a></li>
+              <li><a href="dectionary.html">Proverb Dictionary</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>a
+          </ul>
+      </div>
+      <div class="third">
+          <h2>Similar Pages</h2>
+          <ul>
+              <li><a href="https://www.mmproverbs.pro/2019/01/blog-post_23.html">မြန်မာစကားပုံနှင့် ဆိုရိုးစကားများ</a></li>
+          </ul>
+      </div>
+      <div></div>
+  
+    </footer>
+  
+        <script src="Js/quizscript.js"></script>
+        <script src="Js/script.js"></script>
+</body>
+</html>

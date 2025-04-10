@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+::selection{
+  color: #fff;
+}
+
+.zone{
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+}
+.zone .nav-bar{
+  margin-top: 0vh;
+ /* background-color:rgba(144, 89, 44, 0.516) ;*/
+}
+.zone .items{
+  flex: 1;
+  border: solid 1px ;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+}
+.items span{
+  align-items: center;
+  border-radius: 5px;
+  padding-top: 0.2rem;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #ffffff;
+  border: 2px solid #0b0c0c;
+  transition: all 0.3s ease;
+  display: block;
+  background: rgba(0, 0, 0, 0.699);
+  padding-left: 1rem ;
+  padding-right: 1rem;
+
+}
+.items span.active,
+.items span:hover{
+  color: #080808;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.gallery{
+  margin-left: 250px;
+}
+.gallery .pack{
+  padding: 7px;
+  width: calc(100% / 1);
+  border: solid 1px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.gallery .pack.hide{
+  display: none;
+}
+.gallery .pack.show{
+  animation: animate 0.4s ease;
+}
+.gallery .pack .btnn{
+  flex: 1;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  background-color: rgba(179,179,179,255);
+  border: solid 1px;
+  text-decoration: underline;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s ease;
+  padding: 5px;
+}
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+details {
+  width: 100%;
+  margin: 0 auto ;
+  background: rgba(0, 0, 0, 0.699);
+  margin-bottom: .5rem;
+  box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4); 
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 1px;
+  
+}
+details ul{
+  padding: 10px;
+  padding-left: 3rem;
+  font-size: 0.8rem;
+  list-style: none;
+  color: white;
+}
+ .head{
+  text-decoration: underline white;
+}
+summary {
+  padding: 0.3rem;
+  display: block;
+  background-color:  rgba(255, 255, 255, 0.7);
+  padding-left: 2.2rem;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 10px;
+  width: 766px;
+}
+
+summary:before {
+  content: '';
+  border-width: .4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #000000;
+  position: absolute;
+  top: 0.8rem;
+  left: 1.2rem;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+}
+
+/* THE MAGIC 🧙‍♀️ */
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+details > ul {
+
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  .gallery .pack{
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .gallery .pack{
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 700px) {
+  .zone nav .items{
+    max-width: 600px;
+  }
+  nav .items span{
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .zone{
+    margin: 30px auto;
+  }
+  .zone nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .pack{
+    width: 100%;
+  }
+}

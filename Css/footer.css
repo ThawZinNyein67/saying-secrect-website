@@ -1,0 +1,59 @@
+
+/* /// */
+/*....footer....*/
+footer{
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: rgba(39, 39, 39, 0.591);
+  border: solid 1px black;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin-top: 2rem;
+  color: white;
+}
+footer h2{
+  text-decoration: none;
+}
+footer h2,p{
+  margin-top:1rem;
+  font-weight: 300;
+}
+
+.first{
+  flex:1;
+  padding-left:20vh;
+  padding-right: 2rem;
+}
+.first p{
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+.sec{
+flex:1;
+}
+footer ul{
+  list-style: none;
+  margin-top:1rem;
+  
+}
+footer ul:hover{
+  color: red;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  line-height: 2rem;
+}
+footer ul li :hover{
+text-decoration: underline;
+}
+
+.third{
+  flex:1;
+}
+
+/*.......admin....*/
